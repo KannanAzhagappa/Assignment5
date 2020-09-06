@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+
+      <title>Kannan Azhagappa's Form Page</title>
+        
+      <script type='text/javascript'>
+            
+          function radioreset(varname)
+          {
+            var ele = document.getElementsByName(varname);
+             for(var i=0;i<ele.length;i++)
+            ele[i].checked = false;
+          }
+
+        </script>
+    </head>
+
+    <body>
+
+        <h1 style="color:blue;">Login Form</h1>
+        <form action="formresponse.html" method="post">
+
+            <label for="userfirstname"><b>User's First Name:</b></label>
+            <input type="text" name="userfirstname"><br><br>
+
+            <label for="userlastname"><b>User's Last Name:</b></label>
+            <input type="text" name="userlastname"><br><br>
+
+            <label for="martial_status"><b>User's Martial Status</b></label><br><br>
+            <input type="radio" name="martial_status" value="Married">Married</input>
+            <input type="radio" name="martial_status" value="Unmarried">Unmarried</input><br><br>
+            <input type="checkbox" onclick="radioreset('martial_status')">Reset Martial Status Selection</input><br><br>
+
+            <label for="program_selection"><b>Which Programming language do you like?</b></label><br><br>
+            <input type="radio" name="program_selection" value="HTML">HTML</input>
+            <input type="radio" name="program_selection" value="Javascript">Javascript</input><br><br>
+            <input type="checkbox" onclick="radioreset('program_selection')">Reset Program Selection</input><br><br>
+
+            <input type="submit" value="Submit">
+         </form>
+
+    </body>
+
+</html>
+
